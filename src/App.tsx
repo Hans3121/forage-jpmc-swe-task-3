@@ -5,7 +5,7 @@ import './App.css';
 
 interface IState {
   data: ServerRespond[],
-  showGraph: boolean,
+  showGraph: boolean
 }
 
 class App extends Component<{}, IState> {
@@ -13,7 +13,7 @@ class App extends Component<{}, IState> {
     super(props);
     this.state = {
       data: [],
-      showGraph: false,
+      showGraph: false
     };
   }
 
@@ -29,8 +29,9 @@ class App extends Component<{}, IState> {
       DataStreamer.getData((serverResponds: ServerRespond[]) => {
         this.setState({
           data: serverResponds,
-          showGraph: true,
+          showGraph: true
         });
+
       });
       x++;
       if (x > 1000) {
